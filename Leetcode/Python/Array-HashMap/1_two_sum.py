@@ -6,6 +6,15 @@ class Solution:
                 if (nums[i] + nums[j] == target):
                     return [i, j]
 
+    def twoSum2(self, nums, target):  # O(n) time
+        # O(n) space
+        hashMap = {}
+        for i, n in enumerate(nums):
+            diff = target - n
+            if diff in hashMap:
+                return [hashMap[diff], i]
+            hashMap[n] = i
+
 
 c = Solution()
 print(c.twoSum1([2, 7, 11, 15], 9))
