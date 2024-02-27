@@ -34,7 +34,9 @@ print(numUniqueEmails2(["test.email+alex@leetcode.com",
       "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com"]))
 
 
-for i in range(10):
-    if i == 2:
-        break
+# for i in range(10):
+#     if i == 2:
+#         break
+#     print(i)
+for i in range(5, 55, 2):
     print(i)
