@@ -53,7 +53,22 @@ def findMostRepeatedChar(chars):
         else:
             charDict[char] = 1
     sortedChars = sorted(charDict.items(), key=lambda kv: kv[1])
-    return sortedChars[-1]
+    # print(charDict)
+    return sortedChars[-1][0]
 
 
 # print(findMostRepeatedChar("this is the most common interviewtttttt question"))
+
+lists = [1, 2, 3, 4, 5]
+dicts = [{"car": "ford", "year": 2015}, {"car": "ford", "year": 2014}]
+lists.sort()
+print(lists)
+new_filtered_list = list(filter(lambda l: l > 3, lists))
+new_map_list = list(map(lambda l: l * 3, lists))
+print(new_filtered_list, new_map_list)
+dicts.sort(key=lambda kv: kv['year'], reverse=True)
+list_comprehension = [l*5 for l in lists]
+dict_comprehension = {'year': kv['year'] for kv in dicts}
+print(dict_comprehension, list_comprehension)
+lists2 = [6, 7, 8, 9]
+print(list(zip(lists, dicts)))
