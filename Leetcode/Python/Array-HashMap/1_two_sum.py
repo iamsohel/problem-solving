@@ -18,3 +18,11 @@ class Solution:
 
 c = Solution()
 print(c.twoSum1([2, 7, 11, 15], 9))
+
+
+def missing_number(nums, lower, higher):
+    missing_number = []
+    for i in range(lower, higher+1):
+        if i not in nums:
+            missing_number.append(i)
+    return missing_number
